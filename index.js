@@ -1,14 +1,22 @@
 // ---------- IMPORTS ---------- \\
 import express from "express";
 import chalk from "chalk";
+import cookieParser from "cookie-parser";
 
 // ---------- CONSTANTS ---------- \\
 const app = express();
 const port = 3000;
 
+// ---------- MIDDLEWARE ---------- \\
+app.use(cookieParser());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+app.set("view engine", "ejs");
+
 // ---------- ROUTES ---------- \\
 app.get("/", (req, res) => {
-  res.send("Welcome to the nom-nom project!");
+  res.render("index");
 });
 
 // ---------- SERVER INIT ---------- \\

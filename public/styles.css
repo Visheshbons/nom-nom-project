@@ -1,0 +1,40 @@
+/* =========================
+   CSS RESET & VARIABLES
+========================= */
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --primary: #2563eb;
+    --primary-but-for-the-header: #1c273f;
+    --primary-dark: #1e40af;
+    --primary-dark-but-for-the-header: #1e40af;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --box-background: #eef2ff;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    --shadow-big: 0 25px 50px rgba(0, 0, 0, 0.4);
+    --radius: 15px;
+}
+
+[data-theme="dark"] {
+    --bg: #1e1e2f;
+    --card: #2a2a3d;
+    --primary: #4f94f9;
+    --primary-but-for-the-header: #0f111b;
+    --primary-dark: #1e3a8a;
+    --primary-dark-but-for-the-header: #143080;
+    --text: #e5e5e5;
+    --muted: #9ca3af;
+    --border: #3f3f4f;
+    --box-background: #1e1e2f;
+    --shadow: 0 10px 25px rgba(200, 200, 255, 0.5);
+    --shadow-big: 0 25px 50px rgba(200, 200, 255, 1);
+    --radius: 15px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
