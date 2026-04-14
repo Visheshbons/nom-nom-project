@@ -9,17 +9,7 @@
         <%- include('header') %>
 
         <!-- Contains the site content -->
-        <% switch (page) {
-           case '/': %>
-             <%- include('home') %>
-             <% break;
-           case '/copyright': %>
-             <%- include('copyright') %>
-             <% break;
-           default: %>
-             <%- include('home') %>
-             <% break;
-        } %>
+        <%- include(page) %>
 
         <!-- This is the <footer> element -->
         <%- include('footer') %>

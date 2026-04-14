@@ -15,8 +15,19 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // ---------- ROUTES ---------- \\
+const ejsFilePaths = {
+  "/": "home",
+  "/copyright": "copyright",
+};
+
 app.use((req, res) => {
-  res.render("index", { page: req.path });
+  const view = ejsFilePaths[req.path];
+
+  if (!view) {
+    return res.status(404).render("404");
+  }
+
+  res.render("index", { page: view });
 });
 
 // ---------- SERVER INIT ---------- \\
