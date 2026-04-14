@@ -1,0 +1,23 @@
+<%
+  const rand = Math.random()
+  const messages = [
+    "This page is on holiday",
+    "This page is busy feeding its pet goat",
+    "This page has taken up knitting",
+    "This page is doomscrolling",
+    "This page disapparated",
+    "This page is on sick leave",
+    "This page is protesting for webpage rights",
+    "MOOOOOOOOOOOOOOOO",
+    "This page is on a date with <a href=\"https://google.com\">Google</a>",
+    "Something went wrong.",
+    "This page is a page",
+    "This page is taking a short break and will be back soon.",
+    "This page may or may not exist",
+    "This page got banned for saying \"Six Seven\"",
+    "This page doesn't want to cooperate."
+  ];
+  const randomMsg = messages[Math.floor(rand * messages.length)];
+%>
+
+<p><i><%- randomMsg %><i></p>
