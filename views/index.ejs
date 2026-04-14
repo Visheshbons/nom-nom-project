@@ -8,10 +8,18 @@
         <!-- This is the <header> element -->
         <%- include('header') %>
 
-        <main>
-            <h1>Main</h1>
-            <p>Text</p>
-        </main>
+        <!-- Contains the site content -->
+        <% switch (page) {
+           case '/': %>
+             <%- include('home') %>
+             <% break;
+           case '/copyright': %>
+             <%- include('copyright') %>
+             <% break;
+           default: %>
+             <%- include('home') %>
+             <% break;
+        } %>
 
         <!-- This is the <footer> element -->
         <%- include('footer') %>

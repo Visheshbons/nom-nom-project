@@ -21,7 +21,8 @@
 
     /* Regular variables */
     --bg: #191a1b;
-    --card: #1b3e4f;
+    /* #1b3e4f to rgba with less opacity */
+    --card: rgba(27, 62, 79, 0.4);
     --one: #eea2a7;
     --two: #ecb9a0;
     --three: #eecaa2;
@@ -31,14 +32,14 @@
     --neutral: #5b7380;
     --border: #2e2e2e;
     --box-background: #1e2936;
-    --shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    --shadow-big: 0 25px 50px rgba(0, 0, 0, 0.4);
+    --shadow: 0 10px 25px rgba(136, 134, 070, 0.2);
+    --shadow-big: 0 25px 50px rgba(136, 134, 070, 0.4);
 
     /* Convert hex to decimal and remove 100 from each value */
     --primary-highlight: rgba(138, 062, 067, 0.78);
     --secondary-highlight: rgba(136, 134, 070, 0.82);
 
-    --radius: 15px;
+    --radius: 20px;
     --font: "Comic Relief";
 }
 
@@ -97,6 +98,14 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+}
+
+h1 {
+    color: var(--one);
+}
+
+p {
+    color: var(--two);
 }
 
 a {
@@ -217,9 +226,44 @@ footer {
     padding: 10px 20px;
 }
 
+footer p {
+    color: var(--one);
+}
+
+footer a {
+    color: var(--one);
+}
+
+footer a:hover {
+    color: var(--three);
+}
+
 /* ==========================================================================
    4. LAYOUT
    ========================================================================== */
 header {
     margin-top: var(--header-body-spacing);
+}
+
+main {
+    margin-bottom: 100px;
+}
+
+section {
+    background: var(--card);
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h2 {
+    color: var(--two);
+}
+
+section p {
+    color: var(--five);
 }

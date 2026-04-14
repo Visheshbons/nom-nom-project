@@ -15,8 +15,8 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // ---------- ROUTES ---------- \\
-app.get("/", (req, res) => {
-  res.render("index");
+app.use((req, res) => {
+  res.render("index", { page: req.path });
 });
 
 // ---------- SERVER INIT ---------- \\
