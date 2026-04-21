@@ -18,6 +18,8 @@ app.set("view engine", "ejs");
 const ejsFilePaths = {
   "/": "home",
   "/copyright": "copyright",
+  "/origins": "origins",
+  "/about": "about",
 };
 
 app.use((req, res) => {
